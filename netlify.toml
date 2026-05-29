@@ -1,0 +1,13 @@
+# Netlify deployment config for this Next.js 16 app.
+# The site uses SSR + a proxy/middleware (src/proxy.ts) that redirects "/"
+# to the default locale, so it MUST run on Netlify's Next.js runtime rather
+# than be served as a static site (otherwise "/" returns 404).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Official Next.js runtime — wires up SSR, API routes and middleware as
+# Netlify Functions/Edge Functions. Netlify auto-installs plugins declared here.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
