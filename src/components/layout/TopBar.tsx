@@ -1,0 +1,44 @@
+import { Phone, Mail, MessageCircle } from 'lucide-react';
+import { company } from '@/data/company';
+import { getWhatsAppLink } from '@/lib/utils';
+import { getTranslations } from 'next-intl/server';
+import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
+
+export default async function TopBar() {
+  const t = await getTranslations('topbar');
+  return (
+    <div className="hidden md:block bg-gray-900 text-gray-300 text-sm">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+        <div className="flex items-center gap-6">
+          <a
+            href={getWhatsAppLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 hover:text-primary-400 transition-colors"
+          >
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>WhatsApp</span>
+          </a>
+          <a
+            href={`tel:${company.phone}`}
+            className="flex items-center gap-1.5 hover:text-primary-400 transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5" />
+            <span>{company.phone}</span>
+          </a>
+          <a
+            href={`mailto:${company.email}`}
+            className="flex items-center gap-1.5 hover:text-primary-400 transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            <span>{company.email}</span>
+          </a>
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-gray-400">{t('tagline')}</span>
+          <LanguageSwitcher />
+        </div>
+      </div>
+    </div>
+  );
+}

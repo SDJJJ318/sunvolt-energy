@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À Propos",
+    "solutions": "Solutions",
+    "downloads": "Téléchargements",
+    "news": "Actualités",
+    "contact": "Contact",
+    "getQuote": "Demander un Devis"
+  },
+  "hero": {
+    "slides": [
+      {
+        "subline": "Panneaux Solaires & Onduleurs Tier-1",
+        "headline": "Alimentez l'Avenir avec l'Énergie Solaire",
+        "description": "Nous fournissons des modules solaires haute efficacité des principaux fabricants mondiaux, livrant des solutions d'énergie propre dans plus de 50 pays."
+      },
+      {
+        "subline": "Chaîne d'Approvisionnement Fiable",
+        "headline": "La Confiance des Partenaires Mondiaux",
+        "description": "Avec un entrepôt de 5 000 m² et des partenariats directs avec les usines, nous garantissons un approvisionnement stable et des prix compétitifs."
+      },
+      {
+        "subline": "Des Panneaux aux Onduleurs",
+        "headline": "Solutions Solaires Complètes",
+        "description": "Approvisionnement unique pour les projets solaires résidentiels, commerciaux et à grande échelle. Support technique inclus."
+      },
+      {
+        "subline": "Garantie de Performance 25 Ans",
+        "headline": "Une Qualité sur laquelle Compter",
+        "description": "Chaque produit que nous fournissons est accompagné d'une garantie complète du fabricant et de notre équipe SAV dédiée."
+      }
+    ],
+    "getFreeQuote": "Devis Gratuit",
+    "whatsapp": "WhatsApp"
+  },
+  "products": {
+    "sectionLabel": "Nos Produits",
+    "sectionTitle": "Produits Recommandés",
+    "viewAll": "Voir Tous les Produits"
+  },
+  "about": {
+    "sectionLabel": "À Propos",
+    "title": "SunVolt Energy",
+    "description": "SunVolt Energy est un fournisseur professionnel de produits solaires basé à Wuxi, Chine. Nous nous spécialisons dans les panneaux solaires et onduleurs de haute qualité des principaux fabricants mondiaux.",
+    "highlights": [
+      "Distributeur agréé de marques Tier-1",
+      "Approvisionnement direct en usine à prix compétitifs",
+      "Support technique complet et service après-vente",
+      "Livraison mondiale rapide dans 50+ pays"
+    ],
+    "stats": {
+      "office": "Espace Bureau",
+      "warehouse": "Entrepôt"
+    },
+    "learnMore": "En Savoir Plus Sur Nous"
+  },
+  "solutions": {
+    "sectionLabel": "Solutions",
+    "sectionTitle": "Solutions Solaires pour Chaque Besoin",
+    "items": [
+      {
+        "title": "Solaire Résidentiel",
+        "description": "Systèmes solaires domestiques complets avec panneaux compacts et onduleurs hybrides pour l'indépendance énergétique."
+      },
+      {
+        "title": "Solaire Commercial",
+        "description": "Systèmes en toiture et au sol pour les entreprises, usines et entrepôts. Réduisez les coûts d'exploitation avec l'énergie propre."
+      },
+      {
+        "title": "Solaire à Grande Échelle",
+        "description": "Solutions pour centrales solaires à grande échelle avec modules haute puissance et systèmes de suivi avancés."
+      }
+    ],
+    "cta": "Obtenir une Solution"
+  },
+  "footer": {
+    "description": "Fournisseur professionnel de panneaux solaires proposant des modules photovoltaïques de haute qualité des meilleurs fabricants. Au service des clients du monde entier.",
+    "navigation": "Navigation",
+    "recentProjects": "Projets Récents",
+    "contactUs": "Contact",
+    "allRights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité"
+  },
+  "cta": {
+    "title": "Inscrivez-vous pour les Dernières Mises à Jour",
+    "button": "Nous Contacter"
+  },
+  "topbar": {
+    "tagline": "Votre Partenaire Solaire de Confiance"
+  }
+}

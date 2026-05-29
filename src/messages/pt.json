@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Início",
+    "products": "Produtos",
+    "about": "Sobre Nós",
+    "solutions": "Soluções",
+    "downloads": "Downloads",
+    "news": "Notícias",
+    "contact": "Contato",
+    "getQuote": "Solicitar Cotação"
+  },
+  "hero": {
+    "slides": [
+      {
+        "subline": "Painéis Solares e Inversores Tier-1",
+        "headline": "Potencialize o Futuro com Energia Solar",
+        "description": "Fornecemos módulos solares de alta eficiência dos principais fabricantes mundiais, entregando soluções de energia limpa para mais de 50 países."
+      },
+      {
+        "subline": "Cadeia de Fornecimento Confiável",
+        "headline": "Confiado por Parceiros Globais",
+        "description": "Com armazém de 5.000 m² e parcerias diretas com fábricas, garantimos fornecimento estável e preços competitivos."
+      },
+      {
+        "subline": "De Painéis a Inversores",
+        "headline": "Soluções Solares Completas",
+        "description": "Compras em um único lugar para projetos solares residenciais, comerciais e de grande escala. Suporte técnico incluído."
+      },
+      {
+        "subline": "Garantia de Desempenho de 25 Anos",
+        "headline": "Qualidade em que Você Pode Confiar",
+        "description": "Cada produto que fornecemos vem com garantia completa do fabricante e nossa equipe dedicada de pós-venda."
+      }
+    ],
+    "getFreeQuote": "Cotação Gratuita",
+    "whatsapp": "WhatsApp"
+  },
+  "products": {
+    "sectionLabel": "Nossos Produtos",
+    "sectionTitle": "Produtos Recomendados",
+    "viewAll": "Ver Todos os Produtos"
+  },
+  "about": {
+    "sectionLabel": "Sobre Nós",
+    "title": "SunVolt Energy",
+    "description": "A SunVolt Energy é uma fornecedora profissional de produtos solares sediada em Wuxi, China. Especializamo-nos em painéis solares e inversores de alta qualidade dos principais fabricantes mundiais.",
+    "highlights": [
+      "Distribuidor autorizado de marcas Tier-1",
+      "Fornecimento direto de fábrica com preços competitivos",
+      "Suporte técnico completo e serviço pós-venda",
+      "Envio global rápido para 50+ países"
+    ],
+    "stats": {
+      "office": "Espaço de Escritório",
+      "warehouse": "Armazém"
+    },
+    "learnMore": "Saiba Mais Sobre Nós"
+  },
+  "solutions": {
+    "sectionLabel": "Soluções",
+    "sectionTitle": "Soluções Solares para Cada Necessidade",
+    "items": [
+      {
+        "title": "Solar Residencial",
+        "description": "Sistemas solares residenciais completos com painéis compactos e inversores híbridos para independência energética."
+      },
+      {
+        "title": "Solar Comercial",
+        "description": "Sistemas em telhados e no solo para empresas, fábricas e armazéns. Reduza custos operacionais com energia limpa."
+      },
+      {
+        "title": "Solar em Grande Escala",
+        "description": "Soluções para usinas solares de grande escala com módulos de alta potência e sistemas de rastreamento avançados."
+      }
+    ],
+    "cta": "Obter uma Solução"
+  },
+  "footer": {
+    "description": "Fornecedor profissional de painéis solares, oferecendo módulos fotovoltaicos de alta qualidade dos melhores fabricantes. Atendendo clientes em todo o mundo.",
+    "navigation": "Navegação",
+    "recentProjects": "Projetos Recentes",
+    "contactUs": "Contato",
+    "allRights": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade"
+  },
+  "cta": {
+    "title": "Cadastre-se para Receber as Últimas Atualizações",
+    "button": "Fale Conosco"
+  },
+  "topbar": {
+    "tagline": "Seu Parceiro Solar de Confiança"
+  }
+}

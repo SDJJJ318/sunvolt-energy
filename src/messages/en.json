@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "solutions": "Solutions",
+    "downloads": "Download",
+    "news": "News",
+    "contact": "Contact Us",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "slides": [
+      {
+        "subline": "Tier-1 Solar Panels & Inverters",
+        "headline": "Power the Future with Solar Energy",
+        "description": "We supply high-efficiency solar modules from the world's leading manufacturers, delivering clean energy solutions to over 50 countries."
+      },
+      {
+        "subline": "Reliable Supply Chain",
+        "headline": "Trusted by Global Partners",
+        "description": "With 5,000m² warehouse and direct factory partnerships, we ensure stable supply and competitive pricing for every project."
+      },
+      {
+        "subline": "From Panels to Inverters",
+        "headline": "Complete Solar Solutions",
+        "description": "One-stop procurement for residential, commercial, and utility-scale solar projects. Technical support included."
+      },
+      {
+        "subline": "25-Year Performance Warranty",
+        "headline": "Quality You Can Count On",
+        "description": "Every product we supply comes with full manufacturer warranty and our dedicated after-sales service team."
+      }
+    ],
+    "getFreeQuote": "Get Free Quote",
+    "whatsapp": "WhatsApp"
+  },
+  "products": {
+    "sectionLabel": "Our Product",
+    "sectionTitle": "Recommended Products",
+    "viewAll": "View All Products"
+  },
+  "about": {
+    "sectionLabel": "About Us",
+    "title": "SunVolt Energy",
+    "description": "SunVolt Energy is a professional solar product supplier based in Wuxi, China. We specialize in providing high-quality solar panels and inverters from the world's leading manufacturers including Jinko Solar, LONGi, JA Solar, Trina Solar, and Canadian Solar. With years of industry experience, we serve clients across Africa, Southeast Asia, the Middle East, and South America.",
+    "highlights": [
+      "Authorized distributor of Tier-1 brands",
+      "Direct factory supply with competitive pricing",
+      "Full technical support and after-sales service",
+      "Fast global shipping to 50+ countries"
+    ],
+    "stats": {
+      "office": "Office Space",
+      "warehouse": "Warehouse"
+    },
+    "learnMore": "Know More About Us"
+  },
+  "solutions": {
+    "sectionLabel": "Solutions",
+    "sectionTitle": "Solar Solutions for Every Need",
+    "items": [
+      {
+        "title": "Residential Solar",
+        "description": "Complete home solar systems with compact panels and hybrid inverters, designed for energy independence and lower electricity bills."
+      },
+      {
+        "title": "Commercial Solar",
+        "description": "Rooftop and ground-mounted systems for businesses, factories, and warehouses. Reduce operating costs with clean energy."
+      },
+      {
+        "title": "Utility-Scale Solar",
+        "description": "Large-scale solar farm solutions with high-power modules and advanced tracking systems for maximum energy yield."
+      }
+    ],
+    "cta": "Get a Solution"
+  },
+  "footer": {
+    "description": "Professional solar panel supplier providing high-quality photovoltaic modules from top-tier manufacturers. Serving customers worldwide with reliable products and excellent service.",
+    "navigation": "Navigation",
+    "recentProjects": "Recent Projects",
+    "contactUs": "Contact Us",
+    "allRights": "All rights reserved.",
+    "privacy": "Privacy Policy"
+  },
+  "cta": {
+    "title": "Sign Up Get Latest Updates",
+    "button": "Contact Us"
+  },
+  "topbar": {
+    "tagline": "Your Trusted Solar Partner"
+  }
+}
