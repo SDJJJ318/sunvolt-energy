@@ -86,9 +86,9 @@ function renderContent(content: string) {
 export default async function BlogDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = getBlogBySlug(slug);
 
   if (!post) {
@@ -138,7 +138,7 @@ export default async function BlogDetailPage({
             Contact us for a free consultation.
           </p>
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex items-center px-5 py-2.5 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors"
           >
             Contact Us

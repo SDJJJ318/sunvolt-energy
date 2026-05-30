@@ -1,3 +1,6 @@
+'use client';
+
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Headphones, ShieldCheck, Truck, Clock } from 'lucide-react';
 
@@ -29,6 +32,7 @@ const services = [
 ];
 
 export default function Service() {
+  const locale = useLocale();
   return (
     <section className="py-16 md:py-20 bg-primary-600">
       <div className="container mx-auto px-4">
@@ -62,7 +66,7 @@ export default function Service() {
         {/* CTA Button */}
         <div className="text-center mt-12">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-100 text-primary-600 font-semibold rounded-lg transition-colors"
           >
             Contact Us Now

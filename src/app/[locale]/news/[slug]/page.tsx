@@ -28,9 +28,9 @@ export async function generateMetadata({
 export default async function NewsDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const article = news.find((a) => a.slug === slug);
 
   if (!article) {
@@ -40,11 +40,11 @@ export default async function NewsDetailPage({
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
       <Breadcrumb
-        items={[{ label: 'News', href: '/news' }, { label: article.title }]}
+        items={[{ label: 'News', href: `/${locale}/news` }, { label: article.title }]}
       />
 
       <Link
-        href="/news"
+        href={`/${locale}/news`}
         className="inline-flex items-center gap-1 text-sm text-primary-600 hover:text-primary-700 mt-4 mb-6"
       >
         <ArrowLeft className="w-4 h-4" />

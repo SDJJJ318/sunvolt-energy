@@ -39,9 +39,9 @@ export async function generateMetadata({
 export default async function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const product = getProductBySlug(slug);
 
   if (!product) {
@@ -67,7 +67,7 @@ export default async function ProductDetailPage({
       <div className="max-w-7xl mx-auto px-4 py-6">
       <Breadcrumb
         items={[
-          { label: 'Products', href: '/products' },
+          { label: 'Products', href: `/${locale}/products` },
           { label: product.name },
         ]}
       />
@@ -139,7 +139,7 @@ export default async function ProductDetailPage({
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors"
             >
               Request Quote
@@ -167,7 +167,7 @@ export default async function ProductDetailPage({
             {relatedProducts.map((rp) => (
               <Link
                 key={rp.id}
-                href={`/products/${rp.slug}`}
+                href={`/${locale}/products/${rp.slug}`}
                 className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
               >
                 <div className="aspect-square bg-white p-4 flex items-center justify-center">

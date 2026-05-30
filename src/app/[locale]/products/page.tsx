@@ -2,6 +2,7 @@
 
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import Sidebar from '@/components/shared/Sidebar';
@@ -11,6 +12,7 @@ import { brands } from '@/data/brands';
 
 function ProductGrid() {
   const searchParams = useSearchParams();
+  const locale = useLocale();
   const currentBrand = searchParams.get('brand') || '';
 
   const filteredProducts = currentBrand
@@ -39,7 +41,7 @@ function ProductGrid() {
         {/* Brand filter tabs */}
         <div className="flex flex-wrap gap-2 mb-6">
           <Link
-            href="/products"
+            href={`/${locale}/products`}
             className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
               !currentBrand
                 ? 'bg-primary-600 text-white'
@@ -51,7 +53,7 @@ function ProductGrid() {
           {brands.map((brand) => (
             <Link
               key={brand.id}
-              href={`/products?brand=${brand.id}`}
+              href={`/${locale}/products?brand=${brand.id}`}
               className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
                 currentBrand === brand.id
                   ? 'bg-primary-600 text-white'
@@ -68,7 +70,7 @@ function ProductGrid() {
           {filteredProducts.map((product) => (
             <Link
               key={product.id}
-              href={`/products/${product.slug}`}
+              href={`/${locale}/products/${product.slug}`}
               className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="aspect-square bg-white p-4 flex items-center justify-center">
