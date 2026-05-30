@@ -14,11 +14,12 @@ import TawkChat from '@/components/layout/TawkChat';
 import FloatingChat from '@/components/layout/FloatingChat';
 import { OrganizationSchema, WebSiteSchema } from '@/components/seo/JsonLd';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
+import { SITE_URL } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.sunvoltenergy.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'SunVolt Energy | Premium Solar Panels & Inverters Supplier',
     template: '%s | SunVolt Energy',
