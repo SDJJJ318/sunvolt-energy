@@ -6,9 +6,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
-  return news.map((article) => ({
-    slug: article.slug,
-  }));
+  const locales = ['en', 'fr', 'ru', 'pt', 'es', 'ar'];
+  return locales.flatMap((locale) =>
+    news.map((article) => ({ locale, slug: article.slug }))
+  );
 }
 
 export async function generateMetadata({

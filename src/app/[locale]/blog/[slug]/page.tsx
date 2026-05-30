@@ -5,9 +5,10 @@ import { blogPosts, getBlogBySlug } from '@/data/blog';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  const locales = ['en', 'fr', 'ru', 'pt', 'es', 'ar'];
+  return locales.flatMap((locale) =>
+    blogPosts.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
 export async function generateMetadata({
