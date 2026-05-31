@@ -3,11 +3,12 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
-import Breadcrumb from '@/components/shared/Breadcrumb';
+import Sidebar from '@/components/shared/Sidebar';
 import { products, getProductBySlug } from '@/data/products';
 import { brands } from '@/data/brands';
 import { getWhatsAppLink } from '@/lib/utils';
 import { ProductSchema } from '@/components/seo/JsonLd';
+import ProductInquiryForm from '@/components/shared/ProductInquiryForm';
 
 export function generateStaticParams() {
   const locales = ['en', 'fr', 'ru', 'pt', 'es', 'ar'];
@@ -44,17 +45,12 @@ export default async function ProductDetailPage({
 }) {
   const { slug, locale } = await params;
   const product = getProductBySlug(slug);
+  if (!product) notFound();
 
-  if (!product) {
-    notFound();
-  }
-
-  const brandName =
-    brands.find((b) => b.id === product.brand)?.name || product.brand;
-
+  const brandName = brands.find((b) => b.id === product.brand)?.name || product.brand;
   const relatedProducts = products
     .filter((p) => p.brand === product.brand && p.id !== product.id)
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <>
@@ -65,132 +61,142 @@ export default async function ProductDetailPage({
         sku={product.id}
         image={product.image}
       />
+
       <div className="max-w-7xl mx-auto px-4 py-6">
-      <Breadcrumb
-        items={[
-          { label: 'Products', href: `/${locale}/products` },
-          { label: product.name },
-        ]}
-      />
+        {/* Breadcrumb */}
+        <nav className="text-sm text-gray-500 mb-6 flex items-center gap-1.5">
+          <Link href={`/${locale}`} className="hover:text-primary-600">Home</Link>
+          <span>/</span>
+          <Link href={`/${locale}/products`} className="hover:text-primary-600">Products</Link>
+          <span>/</span>
+          <span className="text-primary-600">{product.name}</span>
+        </nav>
 
-      {/* Product detail */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-6">
-        {/* Left: Product image */}
-        <div className="aspect-[3/4] bg-white border border-gray-200 rounded-lg p-6 flex items-center justify-center">
-          <Image
-            src={product.image}
-            alt={product.name}
-            width={500}
-            height={667}
-            className="object-contain w-full h-full"
-          />
-        </div>
-
-        {/* Right: Product info */}
-        <div className="space-y-6">
-          <div>
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-primary-50 text-primary-700 rounded-full mb-3">
-              {brandName}
-            </span>
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
-              {product.name}
-            </h1>
-            {product.shortDescription && (
-              <p className="mt-3 text-gray-600">{product.shortDescription}</p>
-            )}
+        <div className="flex gap-8">
+          {/* Left sidebar */}
+          <div className="w-56 shrink-0 hidden lg:block">
+            <Sidebar currentBrand={product.brand} />
           </div>
 
-          {/* Specs table */}
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-3">
-              Specifications
-            </h2>
-            <table className="w-full text-sm">
-              <tbody>
-                {Object.entries(product.specs).map(([key, value], index) => (
-                  <tr
-                    key={key}
-                    className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+          {/* Main content */}
+          <div className="flex-1 min-w-0 space-y-10">
+
+            {/* Top: image + info */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Product image */}
+              <div className="border border-gray-200 rounded-lg p-6 bg-white flex items-center justify-center aspect-square">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={480}
+                  height={480}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+
+              {/* Product info */}
+              <div className="space-y-5">
+                <h1 className="text-2xl font-bold text-gray-900">{product.name}</h1>
+                <div className="text-sm text-gray-600 space-y-1.5">
+                  <div><span className="font-medium text-gray-700">Place of Origin：</span>Jiangsu, China</div>
+                  <div><span className="font-medium text-gray-700">Brand Name：</span>{brandName}</div>
+                  <div><span className="font-medium text-gray-700">Certification：</span>IEC, ISO9001:2015, TUV, PV, CNAS</div>
+                  {product.wattage && (
+                    <div><span className="font-medium text-gray-700">Wattage：</span>{product.wattage}</div>
+                  )}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <Link
+                    href={`/${locale}/contact`}
+                    className="inline-flex items-center justify-center px-6 py-2.5 bg-primary-600 text-white font-medium rounded hover:bg-primary-700 transition-colors"
                   >
-                    <td className="px-4 py-2.5 font-medium text-gray-700 capitalize w-1/3">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </td>
-                    <td className="px-4 py-2.5 text-gray-600">{value}</td>
-                  </tr>
+                    ✉ Quote Now
+                  </Link>
+                  <a
+                    href={getWhatsAppLink(product.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-primary-600 text-primary-600 font-medium rounded hover:bg-primary-50 transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Product Details table */}
+            <div>
+              <h2 className="text-base font-semibold text-gray-900 mb-3">Product Details</h2>
+              <table className="w-full text-sm border border-gray-200 rounded overflow-hidden">
+                <tbody>
+                  {Object.entries(product.specs).map(([key, value], i) => (
+                    <tr key={key} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="px-4 py-2.5 font-medium text-gray-700 w-1/3 border-b border-gray-100 capitalize">
+                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                      </td>
+                      <td className="px-4 py-2.5 text-primary-600 border-b border-gray-100">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Product Description */}
+            <div>
+              <h2 className="text-base font-semibold text-gray-900 mb-3">Product Description</h2>
+              <p className="text-gray-600 text-sm mb-4">{product.shortDescription}</p>
+              <ul className="space-y-1.5">
+                {product.features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-600 mt-1.5 shrink-0" />
+                    {f}
+                  </li>
                 ))}
-              </tbody>
-            </table>
-          </div>
+              </ul>
+            </div>
 
-          {/* Features */}
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-3">
-              Key Features
-            </h2>
-            <ul className="space-y-2">
-              {product.features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary-600 mt-1.5 shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Online message / inquiry form */}
+            <div>
+              <h2 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <span>🖥</span> Online message
+              </h2>
+              <ProductInquiryForm productName={product.name} />
+            </div>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-4">
-            <Link
-              href={`/${locale}/contact`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              Request Quote
-            </Link>
-            <a
-              href={getWhatsAppLink(product.name)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-primary-600 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Ask on WhatsApp
-            </a>
+            {/* Recommend Products */}
+            {relatedProducts.length > 0 && (
+              <div>
+                <h2 className="text-base font-semibold text-gray-900 mb-4">Recommend Products</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {relatedProducts.map((rp) => (
+                    <Link
+                      key={rp.id}
+                      href={`/${locale}/products/${rp.slug}`}
+                      className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                    >
+                      <div className="aspect-square bg-white p-3 flex items-center justify-center">
+                        <Image
+                          src={rp.image}
+                          alt={rp.name}
+                          width={200}
+                          height={200}
+                          className="object-contain w-full h-full group-hover:scale-105 transition-transform"
+                        />
+                      </div>
+                      <div className="p-2 border-t border-gray-100 bg-primary-600">
+                        <p className="text-xs text-white font-medium line-clamp-2 text-center">{rp.name}</p>
+                        {rp.wattage && <p className="text-xs text-primary-100 text-center mt-0.5">{rp.wattage}</p>}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       </div>
-
-      {/* Related products */}
-      {relatedProducts.length > 0 && (
-        <div className="mt-16">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">
-            Related Products
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedProducts.map((rp) => (
-              <Link
-                key={rp.id}
-                href={`/${locale}/products/${rp.slug}`}
-                className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
-              >
-                <div className="aspect-square bg-white p-4 flex items-center justify-center">
-                  <Image
-                    src={rp.image}
-                    alt={rp.name}
-                    width={300}
-                    height={300}
-                    className="object-contain w-full h-full group-hover:scale-105 transition-transform"
-                  />
-                </div>
-                <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2">
-                    {rp.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
     </>
   );
 }
