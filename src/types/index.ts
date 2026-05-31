@@ -32,6 +32,7 @@ export interface BrandInfo {
 
 export interface Project {
   id: string;
+  slug: string;
   title: string;
   location: string;
   capacity: string;
