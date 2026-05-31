@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Sidebar from '@/components/shared/Sidebar';
-import Breadcrumb from '@/components/shared/Breadcrumb';
+import PageBanner from '@/components/shared/PageBanner';
 import { projects } from '@/data/projects';
 
 export const metadata: Metadata = {
@@ -11,19 +11,20 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <div className="flex gap-8">
-        <div className="w-64 shrink-0 hidden lg:block">
-          <Sidebar />
-        </div>
-        <div className="flex-1 min-w-0">
-          <Breadcrumb items={[{ label: 'Solutions' }]} />
-
-          <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4 mb-8">
-            All Cases
-          </h1>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <>
+      <PageBanner
+        title="Solutions"
+        subtitle="Solar project cases across 50+ countries — residential, commercial, and utility-scale"
+        image="/images/hero/sungrow-emea.jpg"
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Solutions' }]}
+      />
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="flex gap-8">
+          <div className="w-64 shrink-0 hidden lg:block">
+            <Sidebar />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -48,9 +49,10 @@ export default function SolutionsPage() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

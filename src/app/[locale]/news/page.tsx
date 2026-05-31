@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Breadcrumb from '@/components/shared/Breadcrumb';
+import PageBanner from '@/components/shared/PageBanner';
 import { news } from '@/data/news';
 
 export const metadata: Metadata = {
@@ -11,14 +11,15 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <Breadcrumb items={[{ label: 'News' }]} />
-
-      <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4 mb-8">
-        News
-      </h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <>
+      <PageBanner
+        title="News"
+        subtitle="Latest solar industry trends, technology updates, and company news"
+        image="/images/hero/sungrow-emea.jpg"
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'News' }]}
+      />
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {news.map((article) => (
           <Link
             key={article.id}
@@ -42,5 +43,6 @@ export default function NewsPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }

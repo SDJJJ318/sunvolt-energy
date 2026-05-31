@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import { useLocale } from 'next-intl';
 import { Phone, Mail, MapPin, User } from 'lucide-react';
-import Breadcrumb from '@/components/shared/Breadcrumb';
+import PageBanner from '@/components/shared/PageBanner';
 import { company } from '@/data/company';
 
 export default function ContactPage() {
+  const locale = useLocale();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -38,34 +40,42 @@ export default function ContactPage() {
 
   if (submitted) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <Breadcrumb items={[{ label: 'Contact Us' }]} />
-        <div className="text-center py-16">
-          <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-4">
-            <Mail className="w-8 h-8 text-primary-600" />
+      <>
+        <PageBanner
+          title="Contact Us"
+          subtitle="Get in touch for competitive pricing and fast delivery"
+          image="/images/hero/sungrow-emea.jpg"
+          breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Contact Us' }]}
+        />
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="text-center py-16">
+            <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-4">
+              <Mail className="w-8 h-8 text-primary-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              Message Sent Successfully
+            </h2>
+            <p className="text-gray-600">
+              Thank you for contacting us. We will get back to you within 24
+              hours.
+            </p>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Message Sent Successfully
-          </h2>
-          <p className="text-gray-600">
-            Thank you for contacting us. We will get back to you within 24
-            hours.
-          </p>
         </div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <Breadcrumb items={[{ label: 'Contact Us' }]} />
-
-      <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4 mb-8">
-        Contact Us
-      </h1>
-
-      {/* Contact info cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+    <>
+      <PageBanner
+        title="Contact Us"
+        subtitle="Get in touch for competitive pricing and fast delivery"
+        image="/images/hero/sungrow-emea.jpg"
+        breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Contact Us' }]}
+      />
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        {/* Contact info cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         <div className="flex items-start gap-3 p-4 border border-gray-200 rounded-lg">
           <User className="w-5 h-5 text-primary-600 mt-0.5 shrink-0" />
           <div>
@@ -169,5 +179,6 @@ export default function ContactPage() {
         </button>
       </form>
     </div>
+    </>
   );
 }

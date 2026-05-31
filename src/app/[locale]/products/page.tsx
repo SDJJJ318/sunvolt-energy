@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Sidebar from '@/components/shared/Sidebar';
 import Breadcrumb from '@/components/shared/Breadcrumb';
+import PageBanner from '@/components/shared/PageBanner';
 import { products } from '@/data/products';
 import { brands } from '@/data/brands';
 
@@ -97,10 +98,25 @@ function ProductGrid() {
 
 export default function ProductsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <Suspense fallback={<div className="text-center py-12">Loading...</div>}>
-        <ProductGrid />
-      </Suspense>
-    </div>
+    <>
+      <ProductsBanner />
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <Suspense fallback={<div className="text-center py-12">Loading...</div>}>
+          <ProductGrid />
+        </Suspense>
+      </div>
+    </>
+  );
+}
+
+function ProductsBanner() {
+  const locale = useLocale();
+  return (
+    <PageBanner
+      title="Products"
+      subtitle="Tier-1 solar panels & inverters from the world's leading manufacturers"
+      image="/images/hero/sungrow-emea.jpg"
+      breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Products' }]}
+    />
   );
 }

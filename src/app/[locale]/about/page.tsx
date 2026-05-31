@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { Package, ShieldCheck, Settings, Headphones } from 'lucide-react';
-import Breadcrumb from '@/components/shared/Breadcrumb';
+import PageBanner from '@/components/shared/PageBanner';
 
 export const metadata: Metadata = {
   title: 'About Us - Leading Solar Panel Supplier in China',
@@ -37,14 +37,15 @@ const advantages = [
 
 export default function AboutPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <Breadcrumb items={[{ label: 'About Us' }]} />
-
-      <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4 mb-8">
-        About Us
-      </h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <>
+      <PageBanner
+        title="About Us"
+        subtitle="Leading solar panel & inverter supplier delivering clean energy worldwide"
+        image="/images/hero/sungrow-emea.jpg"
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
+      />
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {advantages.map((item) => (
           <div
             key={item.title}
@@ -61,7 +62,8 @@ export default function AboutPage() {
             </p>
           </div>
         ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
