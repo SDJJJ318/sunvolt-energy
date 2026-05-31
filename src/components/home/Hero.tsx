@@ -8,10 +8,8 @@ import { usePathname } from 'next/navigation';
 import { getWhatsAppLink } from '@/lib/utils';
 
 const slideSrcs = [
-  { type: 'video' as const, src: 'https://videos.pexels.com/video-files/2887464/2887464-hd_1920_1080_25fps.mp4' },
-  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80' },
-  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1920&q=80' },
-  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1920&q=80' },
+  'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80',
+  '/images/hero/sungrow-emea.jpg',
 ];
 
 export default function Hero() {
@@ -30,16 +28,12 @@ export default function Hero() {
 
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-      {slideSrcs.map((slide, index) => (
+      {slideSrcs.map((src, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-700 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         >
-          {slide.type === 'video' ? (
-            <video src={slide.src} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
-          ) : (
-            <img src={slide.src} alt="" className="absolute inset-0 w-full h-full object-cover" />
-          )}
+          <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
