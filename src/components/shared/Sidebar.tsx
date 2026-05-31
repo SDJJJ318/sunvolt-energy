@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import { Phone, Mail, MessageCircle, MapPin } from 'lucide-react';
 import { company } from '@/data/company';
 import { brands } from '@/data/brands';
@@ -9,6 +12,7 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ currentBrand }: SidebarProps) {
+  const locale = useLocale();
   return (
     <aside className="space-y-6">
       {/* Product Categories */}
@@ -20,7 +24,7 @@ export default function Sidebar({ currentBrand }: SidebarProps) {
           {brands.map((brand) => (
             <li key={brand.id}>
               <Link
-                href={`/products/${brand.id}`}
+                href={`/${locale}/products?brand=${brand.id}`}
                 className={`block px-4 py-2.5 text-sm transition-colors ${
                   currentBrand === brand.id
                     ? 'text-primary-600 bg-primary-50 font-medium'

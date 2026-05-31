@@ -110,13 +110,11 @@ export default function ProductsPage() {
 }
 
 function ProductsBanner() {
-  const locale = useLocale();
   return (
     <PageBanner
       title="Products"
       subtitle="Tier-1 solar panels & inverters from the world's leading manufacturers"
       image="/images/hero/sungrow-emea.jpg"
-      breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Products' }]}
     />
   );
 }
