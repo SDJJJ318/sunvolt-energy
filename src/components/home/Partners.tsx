@@ -1,10 +1,15 @@
-import { brands } from '@/data/brands';
+const partnerLogos = [
+  { name: 'Jinko Solar', logo: '/images/brands/jinko.png' },
+  { name: 'LONGi Solar', logo: '/images/brands/longi.svg' },
+  { name: 'JA Solar', logo: '/images/brands/ja-solar.svg' },
+  { name: 'Trina Solar', logo: '/images/brands/trina.svg' },
+  { name: 'Canadian Solar', logo: '/images/brands/canadian-solar.svg' },
+];
 
 export default function Partners() {
   return (
     <section className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-2">
             Cooperation
@@ -14,16 +19,13 @@ export default function Partners() {
           </h2>
         </div>
 
-        {/* Brand Cards */}
         <div className="flex flex-wrap justify-center gap-6">
-          {brands.map((brand) => (
+          {partnerLogos.map((p) => (
             <div
-              key={brand.id}
-              className="w-40 h-16 bg-white border border-gray-200 rounded-lg shadow-sm flex items-center justify-center"
+              key={p.name}
+              className="w-44 h-16 bg-white border border-gray-200 rounded-lg shadow-sm flex items-center justify-center px-4"
             >
-              <span className="text-sm font-bold text-gray-600">
-                {brand.name}
-              </span>
+              <img src={p.logo} alt={p.name} className="max-h-10 max-w-full object-contain" />
             </div>
           ))}
         </div>
