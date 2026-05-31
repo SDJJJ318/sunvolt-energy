@@ -9,9 +9,10 @@ import { getWhatsAppLink } from '@/lib/utils';
 
 interface SidebarProps {
   currentBrand?: string;
+  mode?: 'products' | 'downloads';
 }
 
-export default function Sidebar({ currentBrand }: SidebarProps) {
+export default function Sidebar({ currentBrand, mode = 'products' }: SidebarProps) {
   const locale = useLocale();
   return (
     <aside className="space-y-6">
@@ -24,7 +25,11 @@ export default function Sidebar({ currentBrand }: SidebarProps) {
           {brands.map((brand) => (
             <li key={brand.id}>
               <Link
-                href={`/${locale}/products?brand=${brand.id}`}
+                href={
+                  mode === 'downloads'
+                    ? `#brand-${brand.id}`
+                    : `/${locale}/products?brand=${brand.id}`
+                }
                 className={`block px-4 py-2.5 text-sm transition-colors ${
                   currentBrand === brand.id
                     ? 'text-primary-600 bg-primary-50 font-medium'

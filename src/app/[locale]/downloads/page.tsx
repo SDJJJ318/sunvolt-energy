@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { FileText, Download } from 'lucide-react';
 import Sidebar from '@/components/shared/Sidebar';
 import Breadcrumb from '@/components/shared/Breadcrumb';
+import { brands } from '@/data/brands';
 
 export const metadata: Metadata = {
   title: 'Downloads - Product Datasheets & Brochures',
@@ -79,7 +80,7 @@ export default function DownloadsPage() {
     <div className="max-w-7xl mx-auto px-4 py-6">
       <div className="flex gap-8">
         <div className="w-64 shrink-0 hidden lg:block">
-          <Sidebar />
+          <Sidebar mode="downloads" />
         </div>
         <div className="flex-1 min-w-0">
           <Breadcrumb items={[{ label: 'Downloads' }]} />
@@ -91,8 +92,9 @@ export default function DownloadsPage() {
           <div className="space-y-10">
             {brandOrder.map(brand => {
               const files = datasheets.filter(d => d.brand === brand);
+              const brandId = brands.find(b => b.name === brand)?.id ?? '';
               return (
-                <div key={brand}>
+                <div key={brand} id={`brand-${brandId}`} className="scroll-mt-24">
                   <h2 className="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                     {brand}
                   </h2>
