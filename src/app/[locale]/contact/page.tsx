@@ -45,7 +45,6 @@ export default function ContactPage() {
           title="Contact Us"
           subtitle="Get in touch for competitive pricing and fast delivery"
           image="/images/hero/sungrow-emea.jpg"
-          breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Contact Us' }]}
         />
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="text-center py-16">
@@ -71,7 +70,6 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Get in touch for competitive pricing and fast delivery"
         image="/images/hero/sungrow-emea.jpg"
-        breadcrumb={[{ label: 'Home', href: `/${locale}` }, { label: 'Contact Us' }]}
       />
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Contact info cards */}

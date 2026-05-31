@@ -42,7 +42,6 @@ export default function AboutPage() {
         title="About Us"
         subtitle="Leading solar panel & inverter supplier delivering clean energy worldwide"
         image="/images/hero/sungrow-emea.jpg"
-        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
       />
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
