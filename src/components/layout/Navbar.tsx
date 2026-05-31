@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Sun, Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { brands } from '@/data/brands';
 
@@ -30,9 +31,8 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href={`${localePrefix}/`} className="flex items-center gap-2">
-            <Sun className="w-8 h-8 text-primary-600" />
-            <span className="text-xl font-bold text-gray-900">SunVolt Energy</span>
+          <Link href={`${localePrefix}/`}>
+            <Image src="/images/logo.jpg" alt="SunVolt Energy" width={160} height={48} className="h-12 w-auto object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
