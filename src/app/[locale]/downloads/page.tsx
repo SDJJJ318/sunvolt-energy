@@ -12,28 +12,27 @@ export const metadata: Metadata = {
 
 interface DatasheetFile {
   name: string;
-  file: string;
+  url: string;
   brand: string;
 }
 
 const datasheets: DatasheetFile[] = [
-  // Jinko Solar
-  { name: '575-600W N-Type 72 Half Cell Bifacial Module With Dual Glass', file: '575-600W N-Type 72 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: '605-630W N-Type 66 Half Cell Bifacial Module With Dual Glass', file: '605-630W N-Type 66 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: '625-650W N-Type 66 Half Cell Bifacial Module With Dual Glass', file: '625-650W N-Type 66 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: '625-650W N-Type 78 Half Cell Bifacial Module With Dual Glass', file: '625-650W N-Type 78 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: '650-670W N-Type 66 Half Cell Bifacial Module With Dual Glass', file: '650-670W N-Type 66 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: '710-735W N-Type 66 Half Cell Bifacial Module With Dual Glass', file: '710-735W N-Type 66 Half Cell Bifacial Module With Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: 'BIPV Unpacking Instruction', file: 'BIPV Unpacking Instruction.pdf', brand: 'Jinko Solar' },
-  { name: 'IEC61215 & IEC61730 2016 1500V Single Glass', file: 'IEC61215&IEC61730 2016 1500V Single Glass.pdf', brand: 'Jinko Solar' },
-  { name: 'IEC61215 & IEC61730 2016 Dual Glass', file: 'IEC61215&IEC61730 2016 Dual Glass.pdf', brand: 'Jinko Solar' },
-  { name: 'JinkoSolar Global Installation Manual (EN)', file: 'JinkoSolar Global Installation Manual_202601-EN.pdf', brand: 'Jinko Solar' },
-  { name: 'Limited Warranty — Bifacial Module', file: 'LIMITED WARRANTY REV.EN20250919-LINEAR-BIFACIAL MODULE.pdf', brand: 'Jinko Solar' },
-  { name: 'Limited Warranty — Monofacial Module', file: 'LIMITED WARRANTY REV.EN20250919-LINEAR-MONOFACIAL MODULE.pdf', brand: 'Jinko Solar' },
-  { name: 'Module Types in 1000V SG Certificate', file: 'module types in 1000V SG certificate.pdf', brand: 'Jinko Solar' },
-  { name: 'UL61730 Bifacial Single Glass', file: 'UL61730 Bifacial Single Glass.pdf', brand: 'Jinko Solar' },
-  { name: 'UL61730 Monofacial Single Glass', file: 'UL61730 Monofacial Single Glass.pdf', brand: 'Jinko Solar' },
-  { name: 'Unpacking and Storage Instruction (EN)', file: 'Unpacking and Storage Instruction-EN 2024.04.29.pdf', brand: 'Jinko Solar' },
+  { name: '575-600W N-Type 72 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1TOwS2kz-q4SOiukbuwn1vKbf1bEwqog6', brand: 'Jinko Solar' },
+  { name: '605-630W N-Type 66 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1JmXeql_CYNooWGDCPAoIP7XYn9X0WCFd', brand: 'Jinko Solar' },
+  { name: '625-650W N-Type 66 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1cHfoIGswY1CnyQ1AVd_2xZn7LtzIup24', brand: 'Jinko Solar' },
+  { name: '625-650W N-Type 78 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=10e7D3xDPCxy5PF1ES-vnTej69CUH69-p', brand: 'Jinko Solar' },
+  { name: '650-670W N-Type 66 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1WgJIvz-KNgom7nFRUsxZmUfe9fcn2tlI', brand: 'Jinko Solar' },
+  { name: '710-735W N-Type 66 Half Cell Bifacial Module With Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1U1KalJfwESviHPlBqrx4vfw7YmC2UYcz', brand: 'Jinko Solar' },
+  { name: 'BIPV Unpacking Instruction', url: 'https://drive.google.com/uc?export=download&id=14QO2DifxliGPrrK1hcGr_hBMZX5NsmeY', brand: 'Jinko Solar' },
+  { name: 'IEC61215 & IEC61730 2016 1500V Single Glass', url: 'https://drive.google.com/uc?export=download&id=1Jub02QLiGCE5j-J2-ZkxLUSUQk6YFqMs', brand: 'Jinko Solar' },
+  { name: 'IEC61215 & IEC61730 2016 Dual Glass', url: 'https://drive.google.com/uc?export=download&id=1xYyQ6C-qrBPLbqpygM3etjXxLYWF9lp1', brand: 'Jinko Solar' },
+  { name: 'JinkoSolar Global Installation Manual (EN)', url: 'https://drive.google.com/uc?export=download&id=1cGBTUgGvOSOqo3gZBpqH-OmRHq4FxCnH', brand: 'Jinko Solar' },
+  { name: 'Limited Warranty — Bifacial Module', url: 'https://drive.google.com/uc?export=download&id=1e8YAXoH2AlMBOVZxYKZPUakYnSlcHudU', brand: 'Jinko Solar' },
+  { name: 'Limited Warranty — Monofacial Module', url: 'https://drive.google.com/uc?export=download&id=1HgiRIumntx7AR8PC1RqdsHOyom291KH3', brand: 'Jinko Solar' },
+  { name: 'Module Types in 1000V SG Certificate', url: 'https://drive.google.com/uc?export=download&id=1o4lwSVRD34yI_pmK4TNanJ4ZdRlOKRzK', brand: 'Jinko Solar' },
+  { name: 'UL61730 Bifacial Single Glass', url: 'https://drive.google.com/uc?export=download&id=1j7lD3aZcKVaSl0twPhDxbJ0l5PKLv8LK', brand: 'Jinko Solar' },
+  { name: 'UL61730 Monofacial Single Glass', url: 'https://drive.google.com/uc?export=download&id=1d6zajoS_YEK8T6SIFKymQczV8ZHpZ5sQ', brand: 'Jinko Solar' },
+  { name: 'Unpacking and Storage Instruction (EN)', url: 'https://drive.google.com/uc?export=download&id=1qjMexLnGIP5pN6UKFnlIkm6MSrYDzVVG', brand: 'Jinko Solar' },
 ];
 
 const brandOrder = ['Jinko Solar'];
@@ -73,7 +72,7 @@ export default function DownloadsPage() {
                       </thead>
                       <tbody className="divide-y divide-gray-100">
                         {files.map(file => (
-                          <tr key={file.file} className="hover:bg-gray-50">
+                          <tr key={file.url} className="hover:bg-gray-50">
                             <td className="px-4 py-3">
                               <div className="flex items-center gap-2">
                                 <FileText className="w-4 h-4 text-red-500 shrink-0" />
@@ -88,7 +87,7 @@ export default function DownloadsPage() {
                             </td>
                             <td className="px-4 py-3">
                               <a
-                                href={`/datasheets/${encodeURIComponent(file.file)}`}
+                                href={file.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-medium"
