@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import { news } from '@/data/news';
+import { projects } from '@/data/projects';
 
 export default function News() {
   const displayNews = news.slice(0, 3);
@@ -26,8 +28,15 @@ export default function News() {
               href={`/news/${article.slug}`}
               className="group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
             >
-              {/* Image Placeholder */}
-              <div className="aspect-video bg-gray-200" />
+              <div className="aspect-video overflow-hidden">
+                <Image
+                  src={projects[parseInt(article.id) - 1]?.image ?? projects[0].image}
+                  alt={article.title}
+                  width={480}
+                  height={270}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
 
               {/* Content */}
               <div className="p-5">
