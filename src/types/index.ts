@@ -20,6 +20,7 @@ export interface Product {
   specs: Record<string, string>;
   features: string[];
   image: string;
+  images?: string[];
   featured: boolean;
   shortDescription: string;
 }

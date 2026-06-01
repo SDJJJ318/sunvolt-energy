@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
 import Sidebar from '@/components/shared/Sidebar';
+import ProductImageGallery from '@/components/shared/ProductImageGallery';
 import { products, getProductBySlug } from '@/data/products';
 import { brands } from '@/data/brands';
 import { getWhatsAppLink } from '@/lib/utils';
@@ -83,16 +84,11 @@ export default async function ProductDetailPage({
 
             {/* Top: image + info */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Product image */}
-              <div className="border border-gray-200 rounded-lg p-6 bg-white flex items-center justify-center aspect-square">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={480}
-                  height={480}
-                  className="object-contain w-full h-full"
-                />
-              </div>
+              {/* Product image gallery */}
+              <ProductImageGallery
+                images={product.images?.length ? product.images : [product.image]}
+                alt={product.name}
+              />
 
               {/* Product info */}
               <div className="space-y-5">
