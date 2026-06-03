@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const partners = [
   { name: 'LONGi Solar', label: 'LONGI Brand', logo: '/images/brands/longi.svg', image: '/images/projects/solution-2.jpg' },
-  { name: 'Jinko Solar', label: 'JinKo Solar Brand', logo: '/images/brands/jinko.png', image: '/images/projects/solution-1.jpg' },
-  { name: 'Trina Solar', label: 'Trina Solar Brand', logo: '/images/brands/trina.png', image: '/images/projects/solution-4.jpg' },
+  { name: 'Jinko Solar', label: 'JinKo Solar Brand', logo: '/images/brands/jinko.webp', image: '/images/projects/solution-1.jpg' },
+  { name: 'Trina Solar', label: 'Trina Solar Brand', logo: '/images/brands/trina-new.png', image: '/images/projects/solution-4.jpg' },
   { name: 'JA Solar', label: 'JA SOLAR Brand', logo: '/images/brands/ja-solar.png', image: '/images/projects/solution-5.jpg' },
   { name: 'Canadian Solar', label: 'Canadian Solar Brand', logo: '/images/brands/canadian-solar.png', image: '/images/projects/solution-6.jpg' },
 ];
@@ -26,9 +26,9 @@ export default function Partners() {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 items-start max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 items-start max-w-6xl mx-auto">
           {/* Left: brand list */}
-          <div className="flex flex-col gap-2 w-full md:w-[420px] shrink-0">
+          <div className="flex flex-col gap-2 w-full md:w-[520px] shrink-0">
             {partners.map((p, i) => (
               <button
                 key={p.name}
