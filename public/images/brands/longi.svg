@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
-  <text x="10" y="42" font-family="Arial Black,sans-serif" font-size="32" font-weight="900" fill="#e8001c">LONGi</text>
-  <text x="118" y="42" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#333">Solar</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <!-- LONGi green sun icon -->
+  <circle cx="30" cy="50" r="18" fill="#00843D"/>
+  <circle cx="30" cy="50" r="10" fill="white"/>
+  <circle cx="30" cy="50" r="5" fill="#00843D"/>
+  <!-- rays -->
+  <line x1="30" y1="24" x2="30" y2="30" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="30" y1="70" x2="30" y2="76" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="4" y1="50" x2="10" y2="50" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="50" x2="56" y2="50" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="11.9" y1="31.9" x2="16.1" y2="36.1" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="43.9" y1="63.9" x2="48.1" y2="68.1" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48.1" y1="31.9" x2="43.9" y2="36.1" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="16.1" y1="63.9" x2="11.9" y2="68.1" stroke="#00843D" stroke-width="3" stroke-linecap="round"/>
+  <!-- LONGi text -->
+  <text x="68" y="58" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#00843D" letter-spacing="-1">LONGi</text>
 </svg>

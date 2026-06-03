@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
-  <circle cx="18" cy="30" r="14" fill="#e8001c"/>
-  <text x="38" y="26" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e8001c">Canadian</text>
-  <text x="38" y="44" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e8001c">Solar</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100">
+  <!-- Canadian Solar: sun/maple leaf icon + text -->
+  <!-- Sun burst icon -->
+  <g transform="translate(42,50)">
+    <circle r="16" fill="#F5A623"/>
+    <circle r="10" fill="#E8891A"/>
+    <!-- rays -->
+    <line x1="0" y1="-22" x2="0" y2="-19" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="0" y1="19" x2="0" y2="22" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-22" y1="0" x2="-19" y2="0" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="19" y1="0" x2="22" y2="0" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-15.6" y1="-15.6" x2="-13.4" y2="-13.4" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="13.4" y1="13.4" x2="15.6" y2="15.6" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="13.4" y1="-13.4" x2="15.6" y2="-15.6" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-15.6" y1="15.6" x2="-13.4" y2="13.4" stroke="#F5A623" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <!-- Canadian Solar text stacked -->
+  <text x="76" y="44" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#C8102E">Canadian</text>
+  <text x="76" y="70" font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" fill="#333333">Solar</text>
 </svg>
