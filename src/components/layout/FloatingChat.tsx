@@ -91,7 +91,7 @@ export default function FloatingChat() {
       {/* Floating Buttons */}
       <div className="flex flex-col gap-2">
         <a
-          href={`mailto:info@sunvoltenergy.com`}
+          href={`mailto:ivy@longijinko.com`}
           className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:scale-110 transition-all"
           aria-label="Send email"
         >

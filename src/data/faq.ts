@@ -23,6 +23,6 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'How can I get a quotation?',
-    answer: 'You can request a quote through our website contact form, email us at info@sunvoltenergy.com, or message us directly on WhatsApp. Please include the product model, quantity, and destination country for an accurate quote.',
+    answer: 'You can request a quote through our website contact form, email us at ivy@longijinko.com, or message us directly on WhatsApp. Please include the product model, quantity, and destination country for an accurate quote.',
   },
 ];
