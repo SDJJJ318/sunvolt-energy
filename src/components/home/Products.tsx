@@ -21,11 +21,11 @@ export default async function Products() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {displayProducts.map((product) => (
-            <Link key={product.id} href={`/${locale}/products/${product.slug}`} className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow bg-white">
-              <div className="aspect-square bg-gray-50 overflow-hidden">
+            <Link key={product.id} href={`/${locale}/products/${product.slug}`} className="group">
+              <div className="aspect-square bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                 <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <div className="p-3 border-t border-gray-100">
+              <div className="pt-3 px-1">
                 <p className="text-xs font-semibold text-primary-600 uppercase mb-0.5">{product.brand === 'ja-solar' ? 'JA Solar' : product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</p>
                 <h3 className="text-sm font-bold text-gray-900 leading-tight mb-1 line-clamp-2 group-hover:text-primary-600 transition-colors">
                   {product.name}

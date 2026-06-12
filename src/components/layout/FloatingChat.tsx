@@ -33,7 +33,7 @@ export default function FloatingChat() {
   };
 
   return (
-    <div className="fixed bottom-20 right-20 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-36 right-20 z-50 flex flex-col items-end gap-3">
       {/* Chat Panel */}
       {showChat && (
         <div className="animate-bounce-in w-80 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden mb-2">
