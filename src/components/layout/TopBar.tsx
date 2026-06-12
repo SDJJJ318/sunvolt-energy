@@ -7,7 +7,7 @@ import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
 export default async function TopBar() {
   const t = await getTranslations('topbar');
   return (
-    <div className="hidden md:block bg-primary-700 text-white text-sm">
+    <div className="hidden md:block bg-gray-900 text-gray-300 text-sm">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <a
@@ -35,7 +35,7 @@ export default async function TopBar() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-white/80">{t('tagline')}</span>
+          <span className="text-gray-400">{t('tagline')}</span>
           <LanguageSwitcher />
         </div>
       </div>
