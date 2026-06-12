@@ -32,7 +32,7 @@ export default async function Footer() {
           <div>
             <Link href={p('/')} className="flex items-center gap-2 mb-4">
               <Sun className="w-7 h-7 text-primary-500" />
-              <span className="text-lg font-bold text-white">SunVolt Energy</span>
+              <span className="text-lg font-bold text-white">XinHaoYang New Energy</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">{t('description')}</p>
             <div className="flex items-center gap-3">

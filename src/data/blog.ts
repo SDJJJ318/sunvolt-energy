@@ -65,9 +65,9 @@ For off-grid and hybrid systems common in Africa:
 
 For most African installations, we recommend N-type TOPCon panels (Jinko Tiger Neo or Trina Vertex N) paired with Deye hybrid inverters. This combination offers the best balance of performance, durability, and value for African climate conditions.
 
-Contact SunVolt Energy for competitive pricing and fast delivery to any African country.`,
+Contact XinHaoYang New Energy for competitive pricing and fast delivery to any African country.`,
     date: '2025-05-20',
-    author: 'SunVolt Energy Team',
+    author: 'XinHaoYang New Energy Team',
     category: 'Buying Guide',
     tags: ['Africa', 'solar panels', 'buying guide', 'Jinko', 'LONGi', 'Trina'],
     readTime: '8 min read',
@@ -119,9 +119,9 @@ Contact SunVolt Energy for competitive pricing and fast delivery to any African 
 
 ## Pricing
 
-Both panels are competitively priced. Contact SunVolt Energy for current pricing — we supply both brands with fast delivery worldwide.`,
+Both panels are competitively priced. Contact XinHaoYang New Energy for current pricing — we supply both brands with fast delivery worldwide.`,
     date: '2025-05-15',
-    author: 'SunVolt Energy Team',
+    author: 'XinHaoYang New Energy Team',
     category: 'Comparison',
     tags: ['Jinko Solar', 'LONGi', 'comparison', 'N-type', 'TOPCon', 'HPBC'],
     readTime: '6 min read',
@@ -212,7 +212,7 @@ Import duties vary by country. Common rates:
 4. **Wrong voltage/frequency** inverters for your country
 5. **Missing documentation** for customs clearance
 
-## Why Choose SunVolt Energy
+## Why Choose XinHaoYang New Energy
 
 We simplify the import process:
 - Genuine Tier-1 panels with verifiable certificates
@@ -223,7 +223,7 @@ We simplify the import process:
 
 Contact us for a free consultation on your import requirements.`,
     date: '2025-05-10',
-    author: 'SunVolt Energy Team',
+    author: 'XinHaoYang New Energy Team',
     category: 'Guide',
     tags: ['import', 'China', 'solar panels', 'guide', 'shipping', 'customs'],
     readTime: '10 min read',
@@ -288,9 +288,9 @@ For all other cases, N-type TOPCon is the better long-term investment.
 
 The shift to N-type TOPCon is irreversible. If you're planning a solar installation in 2025 or beyond, we strongly recommend choosing TOPCon panels for maximum return on investment.
 
-SunVolt Energy supplies both PERC and TOPCon panels from all major brands. Contact us for pricing comparison.`,
+XinHaoYang New Energy supplies both PERC and TOPCon panels from all major brands. Contact us for pricing comparison.`,
     date: '2025-05-05',
-    author: 'SunVolt Energy Team',
+    author: 'XinHaoYang New Energy Team',
     category: 'Technology',
     tags: ['TOPCon', 'PERC', 'N-type', 'technology', 'solar cells', 'efficiency'],
     readTime: '7 min read',

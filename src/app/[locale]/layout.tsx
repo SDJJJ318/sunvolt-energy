@@ -21,8 +21,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'SunVolt Energy | Premium Solar Panels & Inverters Supplier',
-    template: '%s | SunVolt Energy',
+    default: 'XinHaoYang New Energy | Premium Solar Panels & Inverters Supplier',
+    template: '%s | XinHaoYang New Energy',
   },
   description:
     'Your trusted supplier of Tier-1 solar panels (Jinko, LONGi, JA Solar, Trina, Canadian Solar) and inverters. Competitive pricing, fast global delivery to 50+ countries.',

@@ -33,14 +33,14 @@ export default function FloatingChat() {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat Panel */}
       {showChat && (
         <div className="animate-bounce-in w-80 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden mb-2">
           <div className="bg-green-600 px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <MessageCircle className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-sm">SunVolt Energy</span>
+              <span className="text-white font-medium text-sm">XinHaoYang New Energy</span>
             </div>
             <button
               onClick={handleCloseChat}
@@ -53,7 +53,7 @@ export default function FloatingChat() {
           <div className="p-4">
             <div className="bg-gray-100 rounded-lg p-3 mb-4">
               <p className="text-sm text-gray-700">
-                Hello! Welcome to SunVolt Energy. How can we help you today? We are happy to assist with product inquiries, quotes, and technical support.
+                Hello! Welcome to XinHaoYang New Energy. How can we help you today? We are happy to assist with product inquiries, quotes, and technical support.
               </p>
             </div>
             <a

@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href={`${localePrefix}/`}>
-            <Image src="/images/logo.jpg" alt="SunVolt Energy" width={160} height={48} className="h-12 w-auto object-contain" />
+            <Image src="/images/logo.jpg" alt="XinHaoYang New Energy" width={160} height={48} className="h-12 w-auto object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

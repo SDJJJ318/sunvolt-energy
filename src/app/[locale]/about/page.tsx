@@ -4,12 +4,12 @@ import PageBanner from '@/components/shared/PageBanner';
 
 export const metadata: Metadata = {
   title: 'About Us - Leading Solar Panel Supplier in China',
-  description: 'SunVolt Energy is a leading solar panel and inverter supplier based in Wuxi, China.',
+  description: 'XinHaoYang New Energy is a leading solar panel and inverter supplier based in Wuxi, China.',
   alternates: { canonical: '/about' },
 };
 
 const paragraphs = [
-  'SunVolt Energy is a globally renowned and leading strategic supplier of high-efficiency Tier 1 photovoltaic modules, as well as a professional large-scale new energy project supporting service provider. We have deeply taken root and developed steadily in China\'s new energy industry for over a decade, owning more than ten years of rich and practical international photovoltaic export operation experience.',
+  'XinHaoYang New Energy is a globally renowned and leading strategic supplier of high-efficiency Tier 1 photovoltaic modules, as well as a professional large-scale new energy project supporting service provider. We have deeply taken root and developed steadily in China\'s new energy industry for over a decade, owning more than ten years of rich and practical international photovoltaic export operation experience.',
   'We have built long-term, in-depth, stable and official strategic cooperation partnerships with the most influential top-tier PV manufacturers across China, including LONGi, Jinko Solar, Trina Solar, JA Solar and other world-famous photovoltaic brands. With exclusive brand channel resources and superior supply chain advantages, we enjoy stable product sources, sufficient production allocation priority and strong market competitive strength.',
   'Our core business focuses on the global export and bulk wholesale of original authentic first-line brand solar panels. We maintain ultra-large-scale continuous spot inventory all year round, with sufficient stock reserves of full series photovoltaic modules of different power specifications, which can fully meet the urgent delivery demand, large-batch centralized procurement demand and long-term repetitive ordering demand of global large engineering projects, international EPC contractors, national regional exclusive distributors and global professional energy importers.',
 ];
@@ -18,7 +18,7 @@ const paragraphs2 = [
   'All solar modules we supply are 100% original factory genuine products, with complete international authoritative certification qualifications including CE, TUV, IEC, UL and other global mainstream certification standards. All products strictly comply with international quality inspection standards and regional market access regulations, fully adapting to the procurement and application requirements of Europe, North America, South America, the Middle East, Southeast Asia, Africa and other mainstream global markets.',
   'Our company always takes the supply of high-quality Tier 1 solar panels as our absolute core business. On the premise of focusing on PV module sales, we can selectively provide matching supporting products such as solar inverters and energy storage batteries according to the personalized procurement needs of different customers, helping buyers optimize product combination and facilitate overall project procurement.',
   'With a professional senior international business team, standardized export operation process, perfect global logistics distribution system and sound after-sales guarantee system, we are able to provide stable and uninterrupted bulk supply, highly competitive project exclusive pricing, efficient global transportation and timely after-sales response services for global partners.',
-  'Relying on outstanding product quality, reliable supply capacity, honest business philosophy and years of overseas market service accumulation, SunVolt Energy has established long-term and stable cooperative relations with a large number of high-quality enterprise clients all over the world. We are firmly committed to becoming the most reliable, most professional and most valued long-term strategic cooperative supplier in the global new energy engineering field.',
+  'Relying on outstanding product quality, reliable supply capacity, honest business philosophy and years of overseas market service accumulation, XinHaoYang New Energy has established long-term and stable cooperative relations with a large number of high-quality enterprise clients all over the world. We are firmly committed to becoming the most reliable, most professional and most valued long-term strategic cooperative supplier in the global new energy engineering field.',
 ];
 
 const partners = [

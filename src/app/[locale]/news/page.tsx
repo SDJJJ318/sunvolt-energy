@@ -7,7 +7,7 @@ import { projects } from '@/data/projects';
 
 export const metadata: Metadata = {
   title: 'News - Solar Industry Updates & Company News',
-  description: 'Stay updated with the latest solar industry trends, technology updates, and company news from SunVolt Energy.',
+  description: 'Stay updated with the latest solar industry trends, technology updates, and company news from XinHaoYang New Energy.',
   alternates: { canonical: '/news' },
 };
 

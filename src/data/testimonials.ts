@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
     name: 'Ahmed Hassan',
     company: 'SolarTech Nigeria Ltd',
     country: 'Nigeria',
-    quote: 'SunVolt Energy has been our trusted supplier for over 2 years. Their Jinko panels are always genuine with full certification. Fast delivery and excellent communication.',
+    quote: 'XinHaoYang New Energy has been our trusted supplier for over 2 years. Their Jinko panels are always genuine with full certification. Fast delivery and excellent communication.',
     rating: 5,
   },
   {

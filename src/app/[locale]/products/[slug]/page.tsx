@@ -29,7 +29,7 @@ export async function generateMetadata({
   const brandName = brands.find(b => b.id === product.brand)?.name || '';
   return {
     title: `${product.name} - ${brandName} Solar Panel`,
-    description: `${product.shortDescription}. ${product.wattage} ${brandName} solar panel. Get competitive pricing and fast delivery from SunVolt Energy.`,
+    description: `${product.shortDescription}. ${product.wattage} ${brandName} solar panel. Get competitive pricing and fast delivery from XinHaoYang New Energy.`,
     alternates: { canonical: `/products/${slug}` },
     openGraph: {
       title: `${product.name} - ${product.wattage} ${brandName}`,
