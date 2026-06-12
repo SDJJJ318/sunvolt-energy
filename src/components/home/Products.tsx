@@ -21,13 +21,17 @@ export default async function Products() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {displayProducts.map((product) => (
-            <Link key={product.id} href={`/${locale}/products/${product.slug}`} className="group">
-              <div className="aspect-square bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-contain p-4" />
+            <Link key={product.id} href={`/${locale}/products/${product.slug}`} className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow bg-white">
+              <div className="aspect-square bg-gray-50 overflow-hidden">
+                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <h3 className="mt-3 text-sm md:text-base font-medium text-gray-800 group-hover:text-primary-600 transition-colors line-clamp-2">
-                {product.name}
-              </h3>
+              <div className="p-3 border-t border-gray-100">
+                <p className="text-xs font-semibold text-primary-600 uppercase mb-0.5">{product.brand === 'ja-solar' ? 'JA Solar' : product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</p>
+                <h3 className="text-sm font-bold text-gray-900 leading-tight mb-1 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                  {product.name}
+                </h3>
+                <p className="text-xs text-gray-500">{product.specs.power} &nbsp;·&nbsp; {product.specs.cellType}</p>
+              </div>
             </Link>
           ))}
         </div>
