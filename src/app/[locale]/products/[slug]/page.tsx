@@ -121,21 +121,29 @@ export default async function ProductDetailPage({
               </div>
             </div>
 
-            {/* Product Details table */}
+            {/* Product Details - datasheet images */}
             <div>
               <h2 className="text-base font-semibold text-gray-900 mb-3">Product Details</h2>
-              <table className="w-full text-sm border border-gray-200 rounded overflow-hidden">
-                <tbody>
-                  {Object.entries(product.specs).map(([key, value], i) => (
-                    <tr key={key} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-4 py-2.5 font-medium text-gray-700 w-1/3 border-b border-gray-100 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </td>
-                      <td className="px-4 py-2.5 text-primary-600 border-b border-gray-100">{value}</td>
-                    </tr>
+              {product.datasheetImages?.length ? (
+                <div className="space-y-2">
+                  {product.datasheetImages.map((src, i) => (
+                    <Image key={i} src={src} alt={`${product.name} datasheet page ${i + 1}`} width={1200} height={850} className="w-full h-auto border border-gray-200 rounded" />
                   ))}
-                </tbody>
-              </table>
+                </div>
+              ) : (
+                <table className="w-full text-sm border border-gray-200 rounded overflow-hidden">
+                  <tbody>
+                    {Object.entries(product.specs).map(([key, value], i) => (
+                      <tr key={key} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-4 py-2.5 font-medium text-gray-700 w-1/3 border-b border-gray-100 capitalize">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </td>
+                        <td className="px-4 py-2.5 text-primary-600 border-b border-gray-100">{value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
             </div>
 
             {/* Product Description */}

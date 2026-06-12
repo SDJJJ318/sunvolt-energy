@@ -42,7 +42,7 @@ export default async function About() {
             </Link>
           </div>
           <div className="lg:col-span-2">
-            <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80" alt="Solar panels installation" className="w-full rounded-xl object-cover aspect-[4/5]" />
+            <img src="/images/about-install.jpg" alt="Solar panels installation" className="w-full rounded-xl object-cover aspect-[4/5]" />
           </div>
         </div>
       </div>

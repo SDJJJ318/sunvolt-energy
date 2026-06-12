@@ -21,6 +21,7 @@ export interface Product {
   features: string[];
   image: string;
   images?: string[];
+  datasheetImages?: string[];
   featured: boolean;
   shortDescription: string;
 }
