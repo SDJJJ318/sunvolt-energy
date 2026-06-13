@@ -74,13 +74,13 @@ function ProductGrid() {
               href={`/${locale}/products/${product.slug}`}
               className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
-              <div className="aspect-square bg-white flex items-center justify-center overflow-hidden">
+              <div className="aspect-[4/5] bg-gray-50 flex items-center justify-center overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={300}
-                  height={300}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform"
+                  height={375}
+                  className="object-contain w-full h-full group-hover:scale-105 transition-transform"
                 />
               </div>
               <div className="p-4 border-t border-gray-100">
