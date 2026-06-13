@@ -84,9 +84,24 @@ function ProductGrid() {
                 />
               </div>
               <div className="p-4 border-t border-gray-100">
-                <h3 className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2">
+                <p className="text-xs font-semibold text-primary-600 uppercase mb-1">
+                  {brands.find((b) => b.id === product.brand)?.name}
+                </p>
+                <h3 className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2 mb-2">
                   {product.name}
                 </h3>
+                {product.wattages && product.wattages.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    {product.wattages.map((w) => (
+                      <span
+                        key={w}
+                        className="inline-block px-1.5 py-0.5 text-xs bg-gray-100 text-gray-700 rounded"
+                      >
+                        {w}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </Link>
           ))}

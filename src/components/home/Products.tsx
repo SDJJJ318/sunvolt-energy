@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { featuredProducts } from '@/data/products';
+import { brands } from '@/data/brands';
 import { getTranslations } from 'next-intl/server';
 import { headers } from 'next/headers';
 
@@ -26,11 +27,24 @@ export default async function Products() {
                 <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="pt-3 px-1">
-                <p className="text-xs font-semibold text-primary-600 uppercase mb-0.5">{product.brand === 'ja-solar' ? 'JA Solar' : product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</p>
-                <h3 className="text-sm font-bold text-gray-900 leading-tight mb-1 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                <p className="text-xs font-semibold text-primary-600 uppercase mb-0.5">
+                  {brands.find((b) => b.id === product.brand)?.name}
+                </p>
+                <h3 className="text-sm font-bold text-gray-900 leading-tight mb-2 line-clamp-2 group-hover:text-primary-600 transition-colors">
                   {product.name}
                 </h3>
-                <p className="text-xs text-gray-500">{product.specs.power} &nbsp;·&nbsp; {product.specs.cellType}</p>
+                {product.wattages && product.wattages.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    {product.wattages.map((w) => (
+                      <span
+                        key={w}
+                        className="inline-block px-1.5 py-0.5 text-xs bg-gray-100 text-gray-700 rounded"
+                      >
+                        {w}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </Link>
           ))}

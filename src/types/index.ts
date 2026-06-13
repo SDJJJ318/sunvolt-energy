@@ -17,6 +17,7 @@ export interface Product {
   brand: Brand;
   category: ProductCategory;
   wattage?: string;
+  wattages?: string[];
   specs: Record<string, string>;
   features: string[];
   image: string;
