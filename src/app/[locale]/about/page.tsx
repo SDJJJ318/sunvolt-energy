@@ -22,10 +22,10 @@ const paragraphs2 = [
 ];
 
 const partners = [
-  { name: 'JinKO Solar', color: '#1a9e3f' },
-  { name: 'LONGi Solar', color: '#e8001c' },
-  { name: 'JA SOLAR', color: '#003087' },
-  { name: 'Trinasolar', color: '#0066b3' },
+  { name: 'JinKO Solar', logo: '/images/brands/jinko.svg' },
+  { name: 'LONGi Solar', logo: '/images/brands/longi.svg' },
+  { name: 'JA SOLAR', logo: '/images/brands/ja-solar.svg' },
+  { name: 'Trinasolar', logo: '/images/brands/trina.svg' },
 ];
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -101,9 +101,13 @@ export default function AboutPage() {
                 key={p.name}
                 className="bg-white border border-gray-200 rounded-lg flex items-center justify-center p-4 h-20 w-52"
               >
-                <span className="text-base font-bold text-center leading-tight" style={{ color: p.color }}>
-                  {p.name}
-                </span>
+                <Image
+                  src={p.logo}
+                  alt={p.name}
+                  width={160}
+                  height={48}
+                  className="object-contain max-h-12"
+                />
               </div>
             ))}
           </div>
