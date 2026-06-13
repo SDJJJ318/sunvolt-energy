@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Sun, Globe, ExternalLink, Video, Phone, Mail, MapPin } from 'lucide-react';
 import { company } from '@/data/company';
 import { projects } from '@/data/projects';
@@ -59,11 +60,16 @@ export default async function Footer() {
 
           <div>
             <h3 className="text-white font-semibold mb-4">{t('recentProjects')}</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {recentProjects.map((project) => (
                 <li key={project.id}>
-                  <Link href={p('/solutions')} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">
-                    {project.title} — {project.location}
+                  <Link href={p('/solutions')} className="flex items-center gap-3 group">
+                    <div className="w-16 h-12 shrink-0 rounded overflow-hidden">
+                      <Image src={project.image} alt={project.title} width={64} height={48} className="object-cover w-full h-full" />
+                    </div>
+                    <span className="text-sm text-gray-400 group-hover:text-primary-400 transition-colors leading-snug">
+                      {project.title} — {project.location}
+                    </span>
                   </Link>
                 </li>
               ))}
