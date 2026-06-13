@@ -26,7 +26,6 @@ const partners = [
   { name: 'LONGi Solar', color: '#e8001c' },
   { name: 'JA SOLAR', color: '#003087' },
   { name: 'Trinasolar', color: '#0066b3' },
-  { name: 'ASTRONERGY', color: '#1a1a1a' },
 ];
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -96,11 +95,11 @@ export default function AboutPage() {
       <div className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle>Partners</SectionTitle>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="bg-white border border-gray-200 rounded-lg flex items-center justify-center p-4 h-20"
+                className="bg-white border border-gray-200 rounded-lg flex items-center justify-center p-4 h-20 w-52"
               >
                 <span className="text-base font-bold text-center leading-tight" style={{ color: p.color }}>
                   {p.name}
