@@ -22,10 +22,10 @@ const paragraphs2 = [
 ];
 
 const partners = [
-  { name: 'JinKO Solar', logo: '/images/brands/jinko.svg' },
   { name: 'LONGi Solar', logo: '/images/brands/longi.svg' },
-  { name: 'JA SOLAR', logo: '/images/brands/ja-solar.svg' },
-  { name: 'Trinasolar', logo: '/images/brands/trina.svg' },
+  { name: 'Jinko Solar', logo: '/images/brands/jinkosolar.png' },
+  { name: 'Trina Solar', logo: '/images/brands/trina-new.png' },
+  { name: 'JA Solar', logo: '/images/brands/ja-solar.png' },
 ];
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
