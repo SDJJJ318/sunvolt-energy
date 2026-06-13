@@ -26,7 +26,6 @@ const partners = [
   { name: 'LONGi Solar', color: '#e8001c' },
   { name: 'JA SOLAR', color: '#003087' },
   { name: 'Trinasolar', color: '#0066b3' },
-  { name: 'Canadian Solar', color: '#e8001c' },
   { name: 'ASTRONERGY', color: '#1a1a1a' },
 ];
 

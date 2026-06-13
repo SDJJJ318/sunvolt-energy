@@ -57,9 +57,6 @@ export default function DownloadsPage() {
               const brandId = brands.find(b => b.name === brand)?.id ?? '';
               return (
                 <div key={brand} id={`brand-${brandId}`} className="scroll-mt-24">
-                  <h2 className="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
-                    {brand}
-                  </h2>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
