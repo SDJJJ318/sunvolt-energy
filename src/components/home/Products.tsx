@@ -24,7 +24,7 @@ export default async function Products() {
           {displayProducts.map((product) => (
             <Link key={product.id} href={`/${locale}/products/${product.slug}`} className="group">
               <div className="aspect-square bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300" />
+                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="pt-3 px-1">
                 <p className="text-xs font-semibold text-primary-600 uppercase mb-0.5">
