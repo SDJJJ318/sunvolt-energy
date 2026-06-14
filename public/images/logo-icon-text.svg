@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <!-- Sun icon with solar panel rays -->
+  <circle cx="30" cy="30" r="14" fill="#16a34a"/>
+  <circle cx="30" cy="30" r="10" fill="#22c55e"/>
+  <!-- Solar rays -->
+  <rect x="28.5" y="6" width="3" height="8" rx="1.5" fill="#16a34a"/>
+  <rect x="28.5" y="46" width="3" height="8" rx="1.5" fill="#16a34a"/>
+  <rect x="6" y="28.5" width="8" height="3" rx="1.5" fill="#16a34a"/>
+  <rect x="46" y="28.5" width="8" height="3" rx="1.5" fill="#16a34a"/>
+  <!-- Diagonal rays -->
+  <rect x="43" y="11" width="3" height="8" rx="1.5" fill="#16a34a" transform="rotate(45 44.5 15)"/>
+  <rect x="14" y="41" width="3" height="8" rx="1.5" fill="#16a34a" transform="rotate(45 15.5 45)"/>
+  <rect x="41" y="43" width="3" height="8" rx="1.5" fill="#16a34a" transform="rotate(-45 42.5 47)"/>
+  <rect x="11" y="14" width="3" height="8" rx="1.5" fill="#16a34a" transform="rotate(-45 12.5 18)"/>
+  <!-- Leaf accent -->
+  <path d="M38 22c6-2 12 2 14 8-4 0-10-1-14-8z" fill="#15803d" opacity="0.7"/>
+  <!-- Company name -->
+  <text x="64" y="28" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#15803d" letter-spacing="1">XHY</text>
+  <!-- Tagline -->
+  <text x="64" y="46" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="500" fill="#6b7280" letter-spacing="2">SOLAR</text>
+</svg>
