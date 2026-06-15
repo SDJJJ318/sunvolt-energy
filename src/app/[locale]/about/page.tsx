@@ -44,7 +44,7 @@ export default function AboutPage() {
       <PageBanner
         title="About Us"
         subtitle="Leading solar panel & inverter supplier delivering clean energy worldwide"
-        image="/images/hero/sungrow-emea.jpg"
+        image="/images/banners/about.jpg"
       />
 
       {/* Company Profile */}

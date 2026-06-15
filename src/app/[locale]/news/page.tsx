@@ -22,7 +22,7 @@ export default async function NewsPage({
       <PageBanner
         title="News"
         subtitle="Latest solar industry trends, technology updates, and company news"
-        image="/images/hero/sungrow-emea.jpg"
+        image="/images/banners/news.jpg"
       />
       <div className="max-w-7xl mx-auto px-4 py-6">
         <nav className="text-sm text-gray-500 mb-6">

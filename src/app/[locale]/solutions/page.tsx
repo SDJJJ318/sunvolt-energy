@@ -22,7 +22,7 @@ export default async function SolutionsPage({
       <PageBanner
         title="Solutions"
         subtitle="Solar project cases across 50+ countries — residential, commercial, and utility-scale"
-        image="/images/hero/sungrow-emea.jpg"
+        image="/images/banners/solutions.jpg"
       />
       <div className="max-w-7xl mx-auto px-4 py-6">
         <nav className="text-sm text-gray-500 mb-6">

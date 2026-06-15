@@ -80,12 +80,12 @@ export default async function Footer() {
             <h3 className="text-white font-semibold mb-4">{t('contactUs')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
-                <a href={`tel:${company.phone}`} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">{company.phone}</a>
-              </li>
-              <li className="flex items-start gap-2.5">
                 <MessageCircle className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
                 <a href={`https://wa.me/${company.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-primary-400 transition-colors">WhatsApp {company.phone}</a>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
+                <a href={`tel:${company.phone}`} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">{company.phone}</a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
