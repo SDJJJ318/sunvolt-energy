@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sun, Globe, ExternalLink, Video, Phone, Mail, MapPin } from 'lucide-react';
+import { Sun, Globe, ExternalLink, Video, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { company } from '@/data/company';
 import { projects } from '@/data/projects';
 import { getTranslations } from 'next-intl/server';
@@ -82,6 +82,10 @@ export default async function Footer() {
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
                 <a href={`tel:${company.phone}`} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">{company.phone}</a>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <MessageCircle className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
+                <a href={`https://wa.me/${company.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-primary-400 transition-colors">WhatsApp {company.phone}</a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 mt-0.5 text-primary-500 shrink-0" />
