@@ -45,7 +45,7 @@ function ProductsBanner({ currentBrand }: { currentBrand: string }) {
   return (
     <div className="relative h-[500px] md:h-[600px] overflow-hidden flex items-center justify-center">
       <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-black/25" />
+
       <div className="relative z-10 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white">{title}</h1>
         <p className="mt-3 text-base md:text-lg text-gray-200 max-w-2xl mx-auto">{subtitle}</p>
