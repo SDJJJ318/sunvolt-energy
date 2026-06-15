@@ -34,7 +34,6 @@ export default function Hero() {
           className={`absolute inset-0 transition-opacity duration-700 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         >
           <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
 
