@@ -19,6 +19,14 @@ const brandBanners: Record<string, string> = {
 
 const allBanners = Object.values(brandBanners);
 
+const brandMeta: Record<string, { title: string; subtitle: string }> = {
+  '': { title: 'Products', subtitle: 'Tier-1 solar panels from the world\'s leading manufacturers' },
+  jinko: { title: 'Jinko Solar', subtitle: 'World\'s largest solar panel manufacturer' },
+  longi: { title: 'LONGi Solar', subtitle: 'Global leader in monocrystalline silicon technology' },
+  'ja-solar': { title: 'JA Solar', subtitle: 'High-efficiency solar modules for every application' },
+  trina: { title: 'Trina Solar', subtitle: 'Smart energy solutions for a sustainable future' },
+};
+
 function ProductsBanner({ currentBrand }: { currentBrand: string }) {
   const [active, setActive] = useState(0);
 
@@ -32,9 +40,16 @@ function ProductsBanner({ currentBrand }: { currentBrand: string }) {
     ? brandBanners[currentBrand]
     : allBanners[active];
 
+  const { title, subtitle } = brandMeta[currentBrand] ?? brandMeta[''];
+
   return (
-    <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <div className="relative h-[500px] md:h-[600px] overflow-hidden flex items-center justify-center">
       <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
+      <div className="relative z-10 text-center px-4">
+        <h1 className="text-3xl md:text-5xl font-bold text-white">{title}</h1>
+        <p className="mt-3 text-base md:text-lg text-gray-200 max-w-2xl mx-auto">{subtitle}</p>
+      </div>
     </div>
   );
 }
