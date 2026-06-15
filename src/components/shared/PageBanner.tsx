@@ -8,7 +8,7 @@ interface PageBannerProps {
 
 export default function PageBanner({ title, subtitle, image }: PageBannerProps) {
   return (
-    <section className="relative h-[300px] md:h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
