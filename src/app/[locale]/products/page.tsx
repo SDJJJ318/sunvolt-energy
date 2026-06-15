@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -17,6 +17,28 @@ const brandBanners: Record<string, string> = {
   trina: '/images/hero/trina-banner.png',
 };
 
+const allBanners = Object.values(brandBanners);
+
+function ProductsBanner({ currentBrand }: { currentBrand: string }) {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (currentBrand) return;
+    const id = setInterval(() => setActive((i) => (i + 1) % allBanners.length), 3000);
+    return () => clearInterval(id);
+  }, [currentBrand]);
+
+  const src = currentBrand && brandBanners[currentBrand]
+    ? brandBanners[currentBrand]
+    : allBanners[active];
+
+  return (
+    <div className="w-full overflow-hidden">
+      <img src={src} alt="" className="w-full h-auto block" />
+    </div>
+  );
+}
+
 function ProductContent() {
   const searchParams = useSearchParams();
   const locale = useLocale();
@@ -30,25 +52,10 @@ function ProductContent() {
     ? brands.find((b) => b.id === currentBrand)?.name
     : 'All Products';
 
-  const bannerImage = currentBrand && brandBanners[currentBrand]
-    ? brandBanners[currentBrand]
-    : '/images/hero/sungrow-emea.jpg';
-
   return (
     <>
-      {/* Dynamic Banner */}
-      <section className="relative h-[220px] md:h-[300px] flex items-center justify-center overflow-hidden">
-        <img src={bannerImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-white">Products</h1>
-          <p className="mt-3 text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
-            Tier-1 solar panels & inverters from the world&apos;s leading manufacturers
-          </p>
-        </div>
-      </section>
+      <ProductsBanner currentBrand={currentBrand} />
 
-      {/* Product listing */}
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex gap-8">
           <div className="w-64 shrink-0 hidden lg:block">
@@ -64,7 +71,6 @@ function ProductContent() {
               </span>
             </div>
 
-            {/* Brand filter tabs */}
             <div className="flex flex-wrap gap-2 mb-6">
               <Link
                 href={`/${locale}/products`}
@@ -91,7 +97,6 @@ function ProductContent() {
               ))}
             </div>
 
-            {/* Product grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
                 <Link
