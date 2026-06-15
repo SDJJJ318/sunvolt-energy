@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
   <!-- Stylized X with solar energy motif -->
   <path d="M8 12L22 30L8 48" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M28 12L14 30L28 48" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- Small sun dot -->
   <circle cx="18" cy="30" r="3" fill="#16a34a"/>
   <!-- Company name -->
-  <text x="42" y="33" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#15803d" letter-spacing="2">XHY</text>
+  <text x="42" y="34" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#15803d" letter-spacing="2">XHY</text>
   <!-- Solar text -->
-  <text x="118" y="33" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#6b7280" letter-spacing="1.5">Solar</text>
-  <!-- Underline accent -->
-  <rect x="42" y="40" width="60" height="2.5" rx="1.25" fill="#22c55e"/>
+  <text x="132" y="34" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#15803d" letter-spacing="1.5">Solar</text>
+  <!-- Underline accent under XHY only -->
+  <rect x="42" y="42" width="69" height="2.5" rx="1.25" fill="#22c55e"/>
 </svg>
