@@ -11,10 +11,10 @@ import { products } from '@/data/products';
 import { brands } from '@/data/brands';
 
 const brandBanners: Record<string, string> = {
-  jinko: '/images/hero/jinko-banner.png',
-  longi: '/images/hero/longi-banner.png',
-  'ja-solar': '/images/hero/ja-solar-banner.png',
-  trina: '/images/hero/trina-banner.png',
+  jinko: '/images/banners/jinko_b.png',
+  longi: '/images/banners/longji_b.png',
+  'ja-solar': '/images/banners/ja_b.png',
+  trina: '/images/banners/trina_b.png',
 };
 
 const allBanners = Object.values(brandBanners);
