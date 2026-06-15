@@ -11,7 +11,6 @@ export default function PageBanner({ title, subtitle, image }: PageBannerProps) 
     <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
       <div className="relative z-10 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white">{title}</h1>
         {subtitle && (
