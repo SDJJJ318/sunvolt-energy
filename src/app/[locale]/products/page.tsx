@@ -33,7 +33,7 @@ function ProductsBanner({ currentBrand }: { currentBrand: string }) {
     : allBanners[active];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       <img src={src} alt="" className="w-full h-auto block" />
     </div>
   );
