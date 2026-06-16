@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-const images = Array.from({ length: 15 }, (_, i) => `/images/strength/img${i + 1}.jpg`);
+const squareImages = Array.from({ length: 8 }, (_, i) => `/images/strength/img${i + 1}.jpg`);
+const portraitImages = Array.from({ length: 7 }, (_, i) => `/images/strength/img${i + 9}.jpg`);
 
 const stats = [
   { value: '10GW+', label: 'Annual Supply Capacity' },
@@ -32,7 +33,7 @@ export default function Strength() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          {images.map((src, i) => (
+          {squareImages.map((src, i) => (
             <div key={i} className="aspect-square overflow-hidden rounded-lg">
               <Image
                 src={src}
@@ -40,6 +41,20 @@ export default function Strength() {
                 width={400}
                 height={400}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-3">
+          {portraitImages.map((src, i) => (
+            <div key={i} className="overflow-hidden rounded-lg">
+              <Image
+                src={src}
+                alt={`Warehouse stock ${i + 9}`}
+                width={540}
+                height={1125}
+                className="w-full h-auto hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}
