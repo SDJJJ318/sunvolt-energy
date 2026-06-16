@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Sidebar from '@/components/shared/Sidebar';
 import Breadcrumb from '@/components/shared/Breadcrumb';
+import Strength from '@/components/home/Strength';
 import { products } from '@/data/products';
 import { brands } from '@/data/brands';
 
@@ -153,6 +154,7 @@ function ProductContent() {
           </div>
         </div>
       </div>
+      <Strength />
     </>
   );
 }

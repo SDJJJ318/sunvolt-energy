@@ -10,6 +10,7 @@ import { brands } from '@/data/brands';
 import { getWhatsAppLink } from '@/lib/utils';
 import { ProductSchema } from '@/components/seo/JsonLd';
 import ProductInquiryForm from '@/components/shared/ProductInquiryForm';
+import Strength from '@/components/home/Strength';
 
 export function generateStaticParams() {
   const locales = ['en', 'fr', 'ru', 'pt', 'es', 'ar'];
@@ -201,6 +202,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </div>
+      <Strength />
     </>
   );
 }
