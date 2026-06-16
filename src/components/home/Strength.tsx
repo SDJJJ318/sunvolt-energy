@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const images = Array.from({ length: 8 }, (_, i) => `/images/strength/img${i + 1}.jpg`);
+const images = Array.from({ length: 15 }, (_, i) => `/images/strength/img${i + 1}.jpg`);
 
 const stats = [
   { value: '10GW+', label: 'Annual Supply Capacity' },
