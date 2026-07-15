@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
 const squareImages = Array.from({ length: 8 }, (_, i) => `/images/strength/img${i + 1}.jpg`);
-const portraitImages = Array.from({ length: 7 }, (_, i) => `/images/strength/img${i + 9}.jpg`);
+// img10 (index 1) removed; remaining 6 chat screenshots in 2×3 grid
+const portraitImages = Array.from({ length: 7 }, (_, i) => `/images/strength/img${i + 9}.jpg`).filter((_, i) => i !== 1);
 
 const stats = [
   { value: '10GW+', label: 'Annual Supply Capacity' },
@@ -46,14 +47,15 @@ export default function Strength() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-3">
+        {/* 6 WhatsApp chat screenshots: 2 rows × 3 columns, compact size */}
+        <div className="grid grid-cols-3 gap-2 mt-3 max-w-3xl mx-auto">
           {portraitImages.map((src, i) => (
             <div key={i} className="overflow-hidden rounded-lg">
               <Image
                 src={src}
-                alt={`Warehouse stock ${i + 9}`}
-                width={540}
-                height={1125}
+                alt={`Customer chat ${i + 1}`}
+                width={360}
+                height={750}
                 className="w-full h-auto hover:scale-105 transition-transform duration-300"
               />
             </div>
