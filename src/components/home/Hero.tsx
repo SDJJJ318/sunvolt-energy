@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { getWhatsAppLink } from '@/lib/utils';
 
 const slideSrcs = [
-  'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1920&q=95&fit=crop',
+  'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80',
   '/images/hero/sungrow-emea.jpg',
 ];
 
@@ -33,7 +33,7 @@ export default function Hero() {
           key={index}
           className={`absolute inset-0 transition-opacity duration-700 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         >
-          <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'saturate(1.4) contrast(1.1) brightness(1.05)' }} />
+          <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
         </div>
       ))}
 
