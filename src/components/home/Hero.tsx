@@ -9,7 +9,6 @@ import { getWhatsAppLink } from '@/lib/utils';
 
 const slideSrcs = [
   'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80',
-  '/images/hero/sungrow-emea.jpg',
 ];
 
 export default function Hero() {
